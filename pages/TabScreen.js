@@ -1,17 +1,18 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export default function TabScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Tab Screen</Text>
-            <Text style={styles.subtitle}> Julinha </Text>
+            <Text style={styles.title}>Tab Screen da Julinha</Text>
         </View>
     );
 }
 
 const styles = {
     container: {
+        height: '100%',
+        width: '100%',
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
@@ -20,10 +21,7 @@ const styles = {
     title: {
         fontSize: 24,
         fontWeight: "bold",
+        textAlign: "center",
         color: "white",
-    },
-    subtitle: {
-        fontSize: 18,
-        color: "#555",
     },
 };
