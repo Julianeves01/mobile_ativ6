@@ -22,9 +22,9 @@ function Screen2() {
 
 export default function TabNavigator() {
     return (
-        <Tab.navigator>
+        <Tab.Navigator> 
             <Tab.Screen name="Screen1" component={Screen1} />
             <Tab.Screen name="Screen2" component={Screen2} />
-        </Tab.navigator>
+        </Tab.Navigator>
     );
 }
