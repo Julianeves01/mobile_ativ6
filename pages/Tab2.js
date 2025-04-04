@@ -5,28 +5,25 @@ export default function Tab2() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bem vindo a minha Tab 2</Text>
-            <Text style={styles.text}> Julinha </Text>
+            <Text style={styles.text}> 🎀 </Text>
         </View>
     );
 }
 
-const styles = {
+const styles = StyleSheet.create({ 
     container: {
-        height: "100%",
-        width: "100%",
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#e24e9b",
     },
     title: {
-        marginBottom: 20,
-        fontSize: 24,
+        fontSize: 30,
         fontWeight: "bold",
         color: "white",
     },
-    text: {
-        fontSize: 18,
-        color: "#555",
+    subtitle: {
+        fontSize: 20,
+        color: "white",
     },
-};
+});
