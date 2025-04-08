@@ -1,30 +1,34 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text } from 'react-native';
+import Page from '../pages/Page';
+import SecondPage from '../pages/SecondPage';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
-function Screen1() {
-    return (
-        <View>
-            <Text>Screen 1</Text>
-        </View>
-    );
-}
-
-function Screen2() {
-    return (
-        <View>
-            <Text>Screen 2</Text>
-        </View>
-    );
-}
-
 export default function TabNavigator() {
     return (
-        <Tab.Navigator> 
-            <Tab.Screen name="Screen1" component={Screen1} />
-            <Tab.Screen name="Screen2" component={Screen2} />
+        <Tab.Navigator initialRouteName='Page'>
+            <Tab.Screen
+                name="Page"
+                component={Page}
+                options={{
+                    tabBarLabel: 'Page',
+                    tabBarIcon: ({ color, size }) => (
+                        <Icon name="home" color={color} size={size} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="SecondPage"
+                component={SecondPage}
+                options={{
+                    tabBarLabel: 'Second Page',
+                    tabBarIcon: ({ color, size }) => (
+                        <Icon name="settings" color={color} size={size} />
+                    ),
+                }}
+            />
         </Tab.Navigator>
     );
 }
